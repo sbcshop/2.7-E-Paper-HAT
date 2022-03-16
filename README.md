@@ -1,1 +1,1 @@
-# 2.7-E-PAPER-HAT
+# 2.7-E-Paper-HAT
