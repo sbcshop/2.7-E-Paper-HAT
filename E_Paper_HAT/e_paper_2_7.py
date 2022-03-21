@@ -37,5 +37,5 @@ try:
         
 
 except KeyboardInterrupt:    
-    e_paper2in7.e_paperconfig.module_exit()
+    E_Paperconfig.e_paperconfig.module_exit()
     exit()
