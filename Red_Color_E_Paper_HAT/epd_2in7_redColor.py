@@ -51,5 +51,5 @@ try:
     e_paper.exit()
     
 except KeyboardInterrupt:    
-    e_paper2in7b.e_paperconfig.module_exit()
+    Ec_Paperconfig.e_paperconfig.module_exit()
     exit()
