@@ -14,7 +14,7 @@ try:
     font40 = ImageFont.truetype(('images/Font.ttc'), 40)
 
     # Drawing on the Horizontal image
-    Himage = Image.open('images/as.bmp')
+    Himage = Image.open('images/img.bmp')
     e_paper.display(e_paper.buffer(Himage))
     time.sleep(1)
     
