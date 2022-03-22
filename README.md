@@ -6,6 +6,6 @@
 
 ## Application
 RFID 
-<img src= "https://github.com/sbcshop/2.7-E-Paper-HAT/blob/main/images/img3.JPG" />
+<img src= "https://github.com/sbcshop/2.7-E-Paper-HAT/blob/main/images/img3.jpg" />
 
 
