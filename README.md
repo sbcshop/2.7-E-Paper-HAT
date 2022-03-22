@@ -9,4 +9,8 @@
 Display RFID data to e-paper HAT, for this you need to go "E_Paper_HAT" folder inside this folder there is a python file name "e_paper_2_7_rfid.py",run this file
 <img src= "https://github.com/sbcshop/2.7-E-Paper-HAT/blob/main/images/img3.jpg" />
 
+## Air Monitoring 
+Display Air Monitoring hat or breakout data to e-paper HAT, for this you need to go "E_Paper_HAT" folder inside this folder there is a python file name "e_paper_2_7_rfid.py",run this file
+
+
 
