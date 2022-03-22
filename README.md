@@ -7,18 +7,18 @@
 ## Code
 There are two folder in github reprository
  * E_Paper_HAT
-   * E_Paperconfig.py      - Pin configuration of e-paper HAT
-   * e_paper_2_7.py        - Run this file
-   * lib_2inch7_e_paper.py - Library of 2.7 inch e-paper HAT
-   * e_paper_buttons.py    - Run this file if you want to use onboard push buttons (application)
-   * e_paper_2_7_rfid.py   - Run this file if you want to connect RFID HAT (application)
+   * E_Paperconfig.py      -> Pin configuration of e-paper HAT
+   * e_paper_2_7.py        -> Run this file
+   * lib_2inch7_e_paper.py -> Library of 2.7 inch e-paper HAT
+   * e_paper_buttons.py    -> Run this file if you want to use onboard push buttons (application)
+   * e_paper_2_7_rfid.py   -> Run this file if you want to connect RFID HAT (application)
    
  * Red_Color_E_Paper_HAT
-   * Ec_Paperconfig.py         - Pin configuration of e-paper HAT
-   * e_paper_2in7_redColor.py  - Run this file 
-   * lib_2inch7_ec_paper.py    - Library of 2.7 inch e-paper red color HAT
-   * e_paper_2in7_color_air.py - Run this file if you want to display values of Air monitoring HAT or breakout (application)
-   * pms_a003.py               - Library of air monitoring AHT or breakout
+   * Ec_Paperconfig.py         -> Pin configuration of e-paper HAT
+   * e_paper_2in7_redColor.py  -> Run this file 
+   * lib_2inch7_ec_paper.py    -> Library of 2.7 inch e-paper red color HAT
+   * e_paper_2in7_color_air.py -> Run this file if you want to display values of Air monitoring HAT or breakout (application)
+   * pms_a003.py               -> Library of air monitoring AHT or breakout
    
 
 ## Application
