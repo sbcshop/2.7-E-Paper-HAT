@@ -18,7 +18,7 @@ There are two folder in GitHub repository
    * e_paper_2in7_redColor.py  -> Run this file 
    * lib_2inch7_ec_paper.py    -> Library of 2.7 inch e-paper red color HAT
    * e_paper_2in7_color_air.py -> Run this file if you want to display values of Air monitoring HAT or breakout (application)
-   * pms_a003.py               -> Library of air monitoring AHT or breakout
+   * pms_a003.py               -> Library of air monitoring HAT or breakout
    
 
 ## Application
