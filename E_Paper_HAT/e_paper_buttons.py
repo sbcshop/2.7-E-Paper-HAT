@@ -33,7 +33,7 @@ while True:
 
         if GPIO.input(KEY1_PIN) == GPIO.LOW: # button is released
             # Drawing on the Horizontal image
-            Himage = Image.open('images/as.bmp')
+            Himage = Image.open('images/img.bmp')
             e_paper.display(e_paper.buffer(Himage))
             #time.sleep(3)
 
@@ -49,13 +49,13 @@ while True:
         
         # Drawing on the Vertical image
         if GPIO.input(KEY3_PIN) == GPIO.LOW: # button is released
-            Himage = Image.open('images/ca.bmp')
+            Himage = Image.open('images/img1.bmp')
             e_paper.display(e_paper.buffer(Himage))
             #time.sleep(3)
             
             
         if GPIO.input(KEY4_PIN) == GPIO.LOW: # button is released
-            Himage = Image.open('images/az.bmp')
+            Himage = Image.open('images/img2.bmp')
             e_paper.display(e_paper.buffer(Himage))
             #time.sleep(3)
             
