@@ -48,13 +48,14 @@ class epaper:
 
         self.GPIO.cleanup()
 
-Ec_Paperconfig = epaper()
+e_paper_config = epaper()
+
 class Ec_Paper: # red color e paper
     def __init__(self):
-        self.reset_pin = Ec_Paperconfig.RST_PIN
-        self.dc_pin = Ec_Paperconfig.DC_PIN
-        self.busy_pin = Ec_Paperconfig.BUSY_PIN
-        self.cs_pin = Ec_Paperconfig.CS_PIN
+        self.reset_pin = e_paper_config.RST_PIN
+        self.dc_pin = e_paper_config.DC_PIN
+        self.busy_pin = e_paper_config.BUSY_PIN
+        self.cs_pin = e_paper_config.CS_PIN
         self.width = width
         self.height = height
 
@@ -112,28 +113,28 @@ class Ec_Paper: # red color e paper
 
     # Hardware reset
     def reset(self):
-        Ec_Paperconfig.digitalwrite(self.reset_pin, 1)
-        Ec_Paperconfig.delay_ms(200) 
-        Ec_Paperconfig.digitalwrite(self.reset_pin, 0)
-        Ec_Paperconfig.delay_ms(10)
-        Ec_Paperconfig.digitalwrite(self.reset_pin, 1)
-        Ec_Paperconfig.delay_ms(200)   
+        e_paper_config.digitalwrite(self.reset_pin, 1)
+        e_paper_config.delay_ms(200) 
+        e_paper_config.digitalwrite(self.reset_pin, 0)
+        e_paper_config.delay_ms(10)
+        e_paper_config.digitalwrite(self.reset_pin, 1)
+        e_paper_config.delay_ms(200)   
 
     def send_command(self, command):
-        Ec_Paperconfig.digitalwrite(self.dc_pin, 0)
-        Ec_Paperconfig.digitalwrite(self.cs_pin, 0)
-        Ec_Paperconfig.spi_writebyte([command])
-        Ec_Paperconfig.digitalwrite(self.cs_pin, 1)
+        e_paper_config.digitalwrite(self.dc_pin, 0)
+        e_paper_config.digitalwrite(self.cs_pin, 0)
+        e_paper_config.spi_writebyte([command])
+        e_paper_config.digitalwrite(self.cs_pin, 1)
 
     def send_data(self, data):
-        Ec_Paperconfig.digitalwrite(self.dc_pin, 1)
-        Ec_Paperconfig.digitalwrite(self.cs_pin, 0)
-        Ec_Paperconfig.spi_writebyte([data])
-        Ec_Paperconfig.digitalwrite(self.cs_pin, 1)
+        e_paper_config.digitalwrite(self.dc_pin, 1)
+        e_paper_config.digitalwrite(self.cs_pin, 0)
+        e_paper_config.spi_writebyte([data])
+        e_paper_config.digitalwrite(self.cs_pin, 1)
         
     def ReadBusy(self):
-        while(Ec_Paperconfig.digitalread(self.busy_pin) == 0):      # 0: idle, 1: busy
-            Ec_Paperconfig.delay_ms(100)
+        while(e_paper_config.digitalread(self.busy_pin) == 0):      # 0: idle, 1: busy
+            e_paper_config.delay_ms(100)
         
     def set_lut(self):
         self.send_command(0x20)               # vcom
@@ -153,7 +154,7 @@ class Ec_Paper: # red color e paper
             self.send_data(self.lut_wb[count])
             
     def init(self):
-        if (Ec_Paperconfig.module_init() != 0):
+        if (e_paper_config.module_init() != 0):
             return -1
             
         self.reset()
@@ -259,5 +260,6 @@ class Ec_Paper: # red color e paper
         self.send_data(0xA5)
         
     def exit(self):
-        Ec_Paperconfig.module_exit()
+        e_paper_config.module_exit()
+
 
