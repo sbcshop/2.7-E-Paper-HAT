@@ -51,10 +51,10 @@ class epaper:
 e_paper_config = epaper()
 class E_Paper:
     def __init__(self):
-        self.reset_pin = E_Paperconfig.RST_PIN
-        self.dc_pin = E_Paperconfig.DC_PIN
-        self.busy_pin = E_Paperconfig.BUSY_PIN
-        self.cs_pin = E_Paperconfig.CS_PIN
+        self.reset_pin = e_paper_config.RST_PIN
+        self.dc_pin = e_paper_config.DC_PIN
+        self.busy_pin = e_paper_config.BUSY_PIN
+        self.cs_pin = e_paper_config.CS_PIN
         self.width = image_width
         self.height = image_height
 
@@ -105,30 +105,30 @@ class E_Paper:
     ]
     # Hardware reset
     def reset(self):
-        E_Paperconfig.digitalwrite(self.reset_pin, 1)
-        E_Paperconfig.delay(200) 
-        E_Paperconfig.digitalwrite(self.reset_pin, 0)
-        E_Paperconfig.delay(10)
-        E_Paperconfig.digitalwrite(self.reset_pin, 1)
-        E_Paperconfig.delay(200)   
+        e_paper_config.digitalwrite(self.reset_pin, 1)
+        e_paper_config.delay(200) 
+        e_paper_config.digitalwrite(self.reset_pin, 0)
+        e_paper_config.delay(10)
+        e_paper_config.digitalwrite(self.reset_pin, 1)
+        e_paper_config.delay(200)   
 
     def send_data(self, data):
-        E_Paperconfig.digitalwrite(self.dc_pin, 1)
-        E_Paperconfig.digitalwrite(self.cs_pin, 0)
-        E_Paperconfig.spi_writebyte([data])
-        E_Paperconfig.digitalwrite(self.cs_pin, 1)
+        e_paper_config.digitalwrite(self.dc_pin, 1)
+        e_paper_config.digitalwrite(self.cs_pin, 0)
+        e_paper_config.spi_writebyte([data])
+        e_paper_config.digitalwrite(self.cs_pin, 1)
         
     def send_command(self, command):
-        E_Paperconfig.digitalwrite(self.dc_pin, 0)
-        E_Paperconfig.digitalwrite(self.cs_pin, 0)
-        E_Paperconfig.spi_writebyte([command])
-        E_Paperconfig.digitalwrite(self.cs_pin, 1)
+        e_paper_config.digitalwrite(self.dc_pin, 0)
+        e_paper_config.digitalwrite(self.cs_pin, 0)
+        e_paper_config.spi_writebyte([command])
+        e_paper_config.digitalwrite(self.cs_pin, 1)
 
 
         
     def ReadBusy(self):        
-        while(E_Paperconfig.digitalread(self.busy_pin) == 0):      #  0: idle, 1: busy
-            E_Paperconfig.delay(200)                
+        while(e_paper_config.digitalread(self.busy_pin) == 0):      #  0: idle, 1: busy
+            e_paper_config.delay(200)                
 
     def set_lut(self):
         self.send_command(0x20) # vcom
@@ -148,7 +148,7 @@ class E_Paper:
             self.send_data(self.lut_wb[count])
 
     def init(self):
-        if (E_Paperconfig.module_init() != 0):
+        if (e_paper_config.module_init() != 0):
             return -1
             
         # E_Paper hardware init start
@@ -243,5 +243,6 @@ class E_Paper:
         self.send_data(0xA5)
         
     def exit(self):
-        E_Paperconfig.exit()
+        e_paper_config.exit()
+
 
