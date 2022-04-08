@@ -40,7 +40,7 @@ try:
     e_paper.display(e_paper.buffer(vertical_black_image), e_paper.buffer(vertical_red_image))
     time.sleep(1)
     
-    horizontal_black_image = Image.open('images/ca.bmp')
+    horizontal_black_image = Image.open('images/img2.bmp')
     #horizontal_red_image = Image.open('images/as.bmp')
     e_paper.display(e_paper.buffer(horizontal_black_image), e_paper.buffer(horizontal_red_image))
     time.sleep(2)
