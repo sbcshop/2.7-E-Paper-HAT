@@ -34,3 +34,11 @@ There are two folder in GitHub repository
 ## E-Paper video
 
 https://www.youtube.com/watch?v=dvTVPM_a0zQ&ab_channel=SBComponentsLtd
+
+
+## For e-paper datasheet go below link:-
+
+https://www.good-display.com/product/236.html
+
+https://www.good-display.com/product/235.html
+
