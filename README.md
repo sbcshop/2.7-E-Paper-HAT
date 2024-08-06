@@ -38,10 +38,6 @@ There are two folder in GitHub repository
 
 https://www.youtube.com/watch?v=dvTVPM_a0zQ&ab_channel=SBComponentsLtd
 
-
-## For e-paper datasheet go below link:-
-
-https://www.good-display.com/product/236.html
-
-https://www.good-display.com/product/235.html
-
+Related Documents:
+- [2.7" E-paper HAT Schematic](https://github.com/sbcshop/2.7-E-Paper-HAT/blob/main/Documents/E-paper%20HAT%20SCH.pdf)
+- [2.7" E-paper Specification](https://github.com/sbcshop/2.7-E-Paper-HAT/blob/main/Documents/E-paper%202.7%20Specs.pdf)
